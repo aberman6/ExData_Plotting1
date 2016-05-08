@@ -25,6 +25,7 @@ plot(power$dateTime, power$Sub_metering_1, type = "l", xlab="", ylab="Energy sub
 points(power$dateTime, power$Sub_metering_2 , type = "l", col = "red")
 points(power$dateTime, power$Sub_metering_3 , type = "l", col = "blue")
 legend("topright", legend = c("Sub-metering_1", "Sub-metering_2","Sub-metering_3"), lty=1, lwd=2 , col = c("black", "red", "blue"))
+axis(1, xaxp=c(0, 30, 4), las=2)
 
 #create png file
 dev.copy(png, file="plot3.png", height=480, width=480)
