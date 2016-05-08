@@ -13,7 +13,7 @@ if(!file.exists("household_power_consumption.txt")){
 }
 
 #read in txt file
-data <- read.table("./household_power_consumption.txt", header = TRUE, sep = ";")
+data <- read.table("./household_power_consumption.txt", header = TRUE, sep = ";", stringsAsFactors= FALSE, dec = ".")
 #formatting
 power <- data[(data$Date == "1/2/2007" | data$Date == "2/2/2007"), ]
 power$Global_active_power <- as.numeric(power$Global_active_power)
